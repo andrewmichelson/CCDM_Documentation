@@ -23,4 +23,5 @@ The ETL for this data mart was forked from the COVID-19 Data Mart and provides a
  * Imaging results
  * Admission, Discharge, and Transfer information
  * Medication information
- 
+
+ **Please note: derived data will by necessity include outlier exclusion as documented, but other raw data will not be mofied*** 
