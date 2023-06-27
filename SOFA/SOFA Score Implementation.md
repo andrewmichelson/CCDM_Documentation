@@ -11,7 +11,7 @@ This code is based on the work done by Mackenzie Hofford (https://github.com/mho
 Important information to note about this function: 
 
 * Since UOP is not available, serum Cr is used to assess the renal SOFA score. 
-* Outliar exclusion is performed for FiO2 by dropping values <21 and >100, for GCS by dropping values <3, and for mean arterial pressure by dropping all values <0 and greater than the 0.999 quantile of the included dataset. This is done by default, but can be turned off by modifying the code above. 
+* Outliar exclusion is performed as they are for the [vital signs] (https://andrewmichelson.github.io/WUSTL-CCDM/data_extraction/vitals.html)
 	
 
 **To calculate the SOFA score, the algorithm needs 4 tables of information:**
