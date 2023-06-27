@@ -8,7 +8,10 @@ nav_order: 99
 
 This code is based on the work done by Mackenzie Hofford (https://github.com/mhofford/I2_Sepsis) and is required for this function to work. 
 
-Note: Since UOP is not available, serum Cr is used to assess the renal SOFA score. 
+Important information to note about this function: 
+
+* Since UOP is not available, serum Cr is used to assess the renal SOFA score. 
+* Outliar exclusion is performed for FiO2 by dropping values <21 and >100, for GCS by dropping values <3, and for mean arterial pressure by dropping all values <0 and greater than the 0.999 quantile of the included dataset. This is done by default, but can be turned off by modifying the code above. 
 	
 
 **To calculate the SOFA score, the algorithm needs 4 tables of information:**
@@ -39,12 +42,12 @@ The input flowsheets dataframe can have more data than is required. To identify 
 
 The input dataframe should have the following columns and structure:
 
-| pat_mrn_id     | measure_name         | value | performed|
-|:-------------------|:------------------|:------|:------|
-| 0000001        | HR				    | 60  | 2023-01-01 14:01:00
-| 0000002        | RR				    | 18  |2023-01-01 14:01:00
-| 0000003        | SpO2               | 99  |2023-01-01 14:01:00
-| 0000004        | Temp		           | 37  |2023-01-01 14:01:00
+| pat_mrn_id     | flowsheet_name | measure_name  | value | performed|
+|:---------------|:---------------|:--------------|:------|:----------|
+| 0000001        | vitals|           HR				    | 60  | 2023-01-01 14:01:00
+| 0000002        |vitals|           RR				    | 18  |2023-01-01 14:01:00
+| 0000003        | vitals|            SpO2               | 99  |2023-01-01 14:01:00
+| 0000004        | vitals|            Temp		           | 37  |2023-01-01 14:01:00
 
 ***Important notes:***
 
@@ -137,7 +140,7 @@ The function uses the patients location to determine if SOFA or qSOFA should be 
 The input dataframe should have the following columns and structure:
 
 | pat_mrn_id     | icu_in|   icu_out        
-|:-------------------|:------------------|
+|:---------------|:------|:---------|
 | 0000001        | 23-01-01 14:01:00	| 23-01-04 14:01:00
 | 0000002        | 23-01-01 14:01:00	| 23-01-04 14:01:00
 | 0000003        | 23-01-01 14:01:00 | 23-01-04 14:01:00
