@@ -20,10 +20,10 @@ By default, this function also removes outlier data as seen below and converts t
 
 |Item|Inclusion Criteria|
 |:--:|---|
-|Temp| ≥ 15C and ≤ 0.999 quartile|
-|RR| ≥ 0 and and ≤ 0.999 quartile|
-|HR| ≥ 0 and and ≤ 0.999 quartile|
-|BP| ≥ 0 and and ≤ 0.999 quartile|
+|Temp| ≥ 15C and ≤ 0.999 quantile|
+|RR| ≥ 0 and and ≤ 0.999 quantile|
+|HR| ≥ 0 and and ≤ 0.999 quantile|
+|BP| ≥ 0 and and ≤ 0.999 quantile|
 |SpO2| ≥ 0 and ≤ 100|
 |FiO2| ≥ 0 and ≤ 100|
 |GCS| ≥ 3 and ≤ 15
