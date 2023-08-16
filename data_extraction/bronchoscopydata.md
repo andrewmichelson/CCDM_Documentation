@@ -38,7 +38,7 @@ The relevant mapping files can be found in the mapping files directory and modif
 1. All lab result SPECIMEN_TYPE and LAB_PROCEDURE combinations were reviewed those associated with a bronchoscopy were used to extract all related data from the labs. 
 2. Then these data were then merged together. 
 
-**NOTE:*** If the specimens were not ordered such that the specimen_type identified it as from a bronchoscopy in some way, (ex, "Aspirate") then it will NOT be included here.**
+**NOTE:** If the specimens were not ordered such that the specimen_type identified it as from a bronchoscopy in some way, (ex, "Aspirate") then it will NOT be included here.**
 
 ***
 
