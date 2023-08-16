@@ -21,7 +21,9 @@ To use this algoithm, the data must be formated as follows:
 The relevant mapping files can be found in the mapping files directory and modified for individual use.
 
 **Please note:** The data returned from this algorithm are all unmodified and further data cleaning will be needed depending on the objective at hand.
+
 ***
+
 ## Bronchoscopy identifidication method:
 
 **Step 1:**
