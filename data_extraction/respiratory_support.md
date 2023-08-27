@@ -53,9 +53,9 @@ The two dataframes should have the followig structure:
 ### To call the function and set the paramters:
 
 		#Repair Encounters
-		repaired_enc = repair_encounters(encouterDF)
+		repaired_enc = repair_encounters(encounterDF)
 		repaired_enc = repaired_enc.explode('INPATIENT_DATA_ID')
-		repaired_enc.INPATIENT_DATA_ID=r repaired_enc.INPATIENT_DATA_ID.astype(float)
+		repaired_enc.INPATIENT_DATA_ID=repaired_enc.INPATIENT_DATA_ID.astype(float)
 		
 		#Repair O2 Using Repaired Encounters
 		repairedo2 = repairo2delmethods(flowsheet_data_frame, repaired_enc, MIN_DUR_HRS = 2, EXTEND_HRS = 24, RETURN_TRACH=False)
