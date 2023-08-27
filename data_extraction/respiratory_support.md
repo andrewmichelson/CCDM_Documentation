@@ -37,12 +37,14 @@ To use this algorithm you need two dataframes:
 The two dataframes should have the followig structure:
 
 ### Encounters:
+
 |PAT_MRN_ID|CSN|INPATIENT_DATA_ID|ADMIT_TIME|DISCHARGE_TIME|
 |:---------|---|-----------------|----------|--------------|
 |123456789 |111111|9999999|1955-11-05 21:04|1985-10-26 21:04|
 
 
 ### Flowsheets:
+
 |PAT_MRN_ID|CSN|INPATIENT_DATA_ID|PERFORMED|FLOWSHEET_NAME|MEASURE_NAME|VALUE|
 |:---------|---|-----------------|----------|--------------|-----------|-----|
 |123456789 |111111|9999999|1955-11-05 21:04| Ventilator Documentation |Vent Status|In Use|
