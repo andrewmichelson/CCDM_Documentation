@@ -11,7 +11,7 @@ As of January 2024, the electornic health record contains data on 37,297 unique 
 
 Since it was not feasible to map all 37,297 lab tests at the establishment of the datacore, data items were prioritized in 2 ways:
 1. Lab tests used for APACHE II and SOFA scores were thoroughly mapped to very low frequency counts (<100).
-   \n This prioritized mapping included the following items:
+   This prioritized mapping included the following items:
    * Arterial pH and PaO2
    * Serum sodium, potassium, creatinine, AST, ALT, bilirubin (total and direct), albumin, WBC, hemoglobin, hematocrit, platelet count, and c-reactive protein.
 
