@@ -8,9 +8,9 @@ has_toc: true
 
 # Bronchoscopy Data Extraction 
 
-Bronchoscopy data is particularly difficult to extract because lab tests performed on bronchoscopy fluid are not directly associated with procedure of performing a bronchoscopy and not all lab tests have a specimen type that directly links back to fluid obtained from a bronschopscopy. As a result, an algorithm was created to identify and extract labs run on bronschoscopy fluid. This algorithm should capture ~80% of all inpatient bronchoscopies performed. Thosem missing were likely ordered incorrectly and cannot be directly identified as from a bronchoscopy. 
+Bronchoscopy data is particularly difficult to extract because lab tests performed on bronchoscopy fluid are not directly associated with procedure of performing a bronchoscopy and not all lab tests have a specimen type that directly links back to fluid obtained from a bronschopscopy. As a result, an algorithm was created to identify and extract labs run on bronschoscopy fluid. This algorithm should capture ~80% of all inpatient bronchoscopies performed. Those missing were likely ordered incorrectly and cannot be directly identified as from the EHR data. 
 
-This algorithm was developed using a 2 step approach and allows the user extract all bronch labs, all bronch cultures (aerobic/anaerobiuc/legionella/pneumocystis), all bronch cell counts with diff and all viral tests off of bronchoscopies. 
+This algorithm was developed using a 2 step approach and allows the user extract all bronchoscopy labs, with the option to extract additional dataframes that contain formatted cell counts and culture results. 
 
 To use this algoithm, the data must be formated as follows:
 
@@ -28,7 +28,7 @@ The relevant mapping files can be found in the mapping files directory and modif
 
 **Step 1:**
 
-1. Lab results were searched for strings that could be associated with a bronschoscopy (ex, 'BAL', 'BW', etc..) and manually reviewed for relevance. 
+1. Lab results were searched for strings that could be associated with a bronschoscopy (ex, 'BAL', 'Bronch Wash', etc..) and manually reviewed for relevance. 
 2. LAB_ORDER_ID's associated with the above lab results were extracted and used to find all related lab tests performed on the fluid obtained from the bronchoscopy
 
 **NOTE:** This identified mostly cell counts.
@@ -40,30 +40,21 @@ The relevant mapping files can be found in the mapping files directory and modif
 
 **NOTE:** If the specimens were not ordered such that the specimen_type identified it as from a bronchoscopy in some way, (ex, "Aspirate") then it will NOT be included here.**
 
+## A note about extracting bronchoscopy cell differential and count:
+Here a mapping file was used to identify cell counts and differential and then group like items with different names together. This can be modified in the mapping file and codebase if needed. The function also calcualtes absolute cell counts as needed.
+
+## A note about extracting bronchoscopy culture data (including bacterial, mycology, viral, AFB, and PJP):
+Here a mapping file was used to identify the type of microbiology exam performed on the bronchoscopy fluid (direct exam, culture, or report) and group them together to make table columns. The data within the columns was then harmoninzed to be True, False or None, if positive, negative, or not performed, respectively. Since this aggregates multiple tests that report outcomes in different ways, a regular expression was used to search individual results for specific strings and label them as positive if identified. For example, a CMV pcr test may be reported as "DETECTED" or "POSITIVE", in which case this would return "True" for that lab test. 
+
+For other data where the outcome is expected to be a list of strings (ex, cultured organisms) the algorithm will return a comma separated string (ex, E. Coli, Staph Aureus). Lastly, the unmodified microbiology reports and direct specimen exams are returned unmodified. While the data contains both the final report and a listed organism (if one id identified), they do not correlate perfectly, though they are close. In internal review, 107 of 2094 (5%) mycology reports and 28 or 2805 (1%) bacterial cultures that isolated an organism did not have an organism directly available. These reports are available in the output data if the end used wishes to parse them further. 
+
 ***
 
+## How to use the function:
+		# To extract bronchoscopy data simply call the function, with the desired flags:
+		all_bronch_data = newgetbronchs(labs, allbronchdata = True, cellcountseparately=True, culturedataseparately = True)
 
-## Extract all bronchoscopy-related data
-
-		# To extract all bronchoscopy related data simple call the function:
-		all_bronch_data = get_bronchs(labs, allbronchdata = True, cellcountseparately=False, returnculturesseparately = False, returnvirusesseparately=False)
+**Plese note:** This function returns a dynamic dictionary with the following keys that vary based on the set flags: "all_bronch_results", "bronch_cell_count" and "bronch_cultures"
 		
-		
-## Extract bronchoscopy cell differential and cell count:
-Here a mapping file was used to identify cell counts and differential and then group like items with different names together. This can be modified in the mapping file and codebase if needed. 
 
-		# To get these data back in a pivoted dataframe, simply set the cellcountseparately flag to True:
-		all_bronch_data, all_cellcounts = get_bronchs(labs, allbronchdata = True, cellcountseparately=True, returnculturesseparately = False, returnvirusesseparately=False) 
-
-## Extract bronchoscopy culture data:
-Here a mapping file was used to identify aerobic and anaerobic, legionella and pneumocystis tests. While data points are included can be modified in the mapping file. 
-
-		# To get these data back set the returnculturesseparately flag to True:
-		all_bronch_data, all_cellcounts, all_cx =get_bronchs(labs, allbronchdata = True, cellcountseparately=True, returnculturesseparately = True, returnvirusesseparately=False) 
-
-## Extract bronchoscopy viral data:
-Here a mapping file was used to identify viral tests. While data points are included can be modified in the mapping file. 
-
-		# To get these data back set the returnvirusesseparately flag to True:
-		all_bronch_data, all_cellcounts, all_cx, all_viruses =get_bronchs(labs, allbronchdata = True, cellcountseparately=True, returnculturesseparately = True, returnvirusesseparately=True) 
 		
