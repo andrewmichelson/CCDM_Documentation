@@ -36,16 +36,16 @@ Output:
 1. These functions define dictionaries that map comorbidity conditions to corresponding ICD-9 and ICD-10 codes.
 
 
-2. The dictionaries also include information about the original, Quan11 scores (Elixhauser) and Moore17, vanWalraven09(Charlson)for each condition. 
+2. The dictionaries also include information about the original, Quan11 scores (Elixhauser) and Moore17, vanWalraven09 (Charlson) for each condition. 
 
 
 ## Comorbidity Scores using Spark_df with lookback period :
 
 This fuction reads comorbidity data from a Spark SQL query. It then merges the comorbidity data with the provided Spark DataFrame and filters the data within a specified lookback period.
        
-             df,df_wide=filter_data_within_lookback(spark_df, lookback_start, lookback_window)
+             df,df_scores= get_comorb(spark_df,look_start,lookback_window)
 
-* lookback_start  = to include data starting from the admission time (set to 0 days, lookback_start= admit_time) (modular)
-* lookback_window = lookback untill how many days. (modular)
+* look_start  = to include diagnosis data +/- from the admission time (set to 0 days, look_start= admit_time) (modular) #(if look_start set -2 then admit_time minus 2days, if set to 10 then admit_time plus 10days)
+* lookback_window = lookback untill how many days.(modular)
 
   
