@@ -6,9 +6,8 @@ description: "WUSTL PCCDC Welcome"
 permalink: /
 ---
 
-# WUSTL-CCDM
-
-Welcome to the WUSTL Pulmonology & Critical Care Data Core. This resource offers comprehensive access to electronic health records (EHR) for patients treated within Washington University in St. Louis’s critical care units, dating from the adoption of the Epic EHR system in July 2018. It includes not only inpatient ICU data but also relevant outpatient encounters.
+# Welcome to the WUSTL Pulmonology & Critical Care Data Core. 
+This resource offers comprehensive access to electronic health records (EHR) for patients treated within Washington University in St. Louis’s critical care units, dating from the adoption of the Epic EHR system in July 2018. It includes not only inpatient ICU data but also relevant outpatient encounters.
 
 What sets our Data Core apart is its enhancement beyond raw EHR data. We provide optional, clinically-oriented knowledge layers that pre-validate and streamline the data, making it immediately useful for quality improvement, research, and educational purposes. This includes advanced algorithms that can extract and analyze complex metrics, such as duration of mechanical ventilation, ICU length of stay, and other critical parameters.
 
