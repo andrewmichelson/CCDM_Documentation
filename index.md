@@ -2,26 +2,16 @@
 layout: default
 title: Home
 nav_order: 1
-description: "WUSTL CCDM Conventions"
+description: "WUSTL PCCDC Welcome"
 permalink: /
 ---
 
 # WUSTL-CCDM
 
-The WUSTL Critical Care Data Mart provides access to electronic health record (EHR) data from all patients who recieved critical care services at Washington University in St. Louis longitudinally starting after the implementation of the Epic EHR (6/2018). Since it is a logintudinal database, it will  include outpatient encounter information before and after any critical care stay. 
+Welcome to the WUSTL Pulmonology & Critical Care Data Core. This resource offers comprehensive access to electronic health records (EHR) for patients treated within Washington University in St. Louis’s critical care units, dating from the adoption of the Epic EHR system in July 2018. It includes not only inpatient ICU data but also relevant outpatient encounters.
 
-The ETL for this data mart was forked from the COVID-19 Data Mart and provides access to data through windows into the Research Data Core accessible through a SparkSQL and Spark Python Environment. 
+What sets our Data Core apart is its enhancement beyond raw EHR data. We provide optional, clinically-oriented knowledge layers that pre-validate and streamline the data, making it immediately useful for quality improvement, research, and educational purposes. This includes advanced algorithms that can extract and analyze complex metrics, such as duration of mechanical ventilation, ICU length of stay, and other critical parameters.
 
- This repository will provide documentation on the development of knowledge layers built on top of the RAW (unmodified) EHR data.  
+To see what types of data are available in the Data Core, please [click here](datatypes.md)
 
-<ins>The Data Mart includes:</ins>
- * Flowsheet data (includes vital signs)
- * Laboratory results
- * Comorbidity ICD codes
- * Procedural ICD codes
- * Culture and susceptability data
- * Imaging results
- * Admission, Discharge, and Transfer information
- * Medication information
-
- **Please note: derived data will by necessity include outlier exclusion as documented, but other raw data will not be mofied*** 
+ **Please note: Derived data from these knowledge layers will by necessity include outlier exclusion as documented, but other raw data will not be mofied*** 
