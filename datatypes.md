@@ -3,7 +3,7 @@ layout: default
 title: Data Types
 nav_order: 2
 description: "WUSTL CCDM Data Types"
-permalink: /
+permalink: /datatypes.md
 ---
 
 # Pulmonology Critical Care Data Types
