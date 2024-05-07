@@ -11,6 +11,6 @@ Welcome to the WUSTL Pulmonology & Critical Care Data Core. This resource offers
 
 What sets our Data Core apart is its enhancement beyond raw EHR data. We provide optional, clinically-oriented knowledge layers that pre-validate and streamline the data, making it immediately useful for quality improvement, research, and educational purposes. This includes advanced algorithms that can extract and analyze complex metrics, such as duration of mechanical ventilation, ICU length of stay, and other critical parameters.
 
-To see what types of data are available in the Data Core, please [click here](datatypes.md)
+To see what types of data are available in the Data Core, please [click here](datatypes/datatypes.md)
 
  **Please note: Derived data from these knowledge layers will by necessity include outlier exclusion as documented, but other raw data will not be mofied*** 
