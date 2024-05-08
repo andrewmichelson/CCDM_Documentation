@@ -2,7 +2,7 @@
 layout: default
 title: SOFA Score
 parent: Derived data
-nav_order: 4
+nav_order: 3
 has_toc: true
 ---
 
