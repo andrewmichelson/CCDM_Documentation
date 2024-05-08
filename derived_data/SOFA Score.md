@@ -1,7 +1,9 @@
 ---
 layout: default
-title: SOFA Score Calculation
-nav_order: 99
+title: SOFA Score
+parent: Derived data
+nav_order: 3
+has_toc: true
 ---
 
 # SOFA Score Implementation 
