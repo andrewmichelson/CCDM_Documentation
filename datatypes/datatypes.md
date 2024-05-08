@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Data Types
-nav_order: 99
+nav_order: 2
 ---
 
 # Pulmonology Critical Care Data Types
