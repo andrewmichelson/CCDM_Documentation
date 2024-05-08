@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Comorbidity Score Calculation (Elixhauser & Charlson)
+title: Comorbidity Scores
 parent: Derived data
-nav_order: 5
+nav_order: 3
 has_toc: true
 ---
 
