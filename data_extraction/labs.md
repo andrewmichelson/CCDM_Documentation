@@ -11,11 +11,7 @@ As of January 2024, the electornic health record contains data on 37,297 unique 
 
 Since it was not feasible to map all 37,297 lab tests at the establishment of the datacore, data items were prioritized in 2 ways:
 1. Exhaustive mapping for high yield lab tests (Covers labs for APACHE II and SOFA Scores):
-* WBC
-* Lymphocyte Count, Absolute
-* Lymphocyte Count, Percent
-* Neutrophil Count, Percent
-* Neutrophil Count. Absolute
+* ABG
 * AST
 * ALT
 * Prothombin time
@@ -28,12 +24,16 @@ Since it was not feasible to map all 37,297 lab tests at the establishment of th
 * Fibrinogen
 * D-dimer
 * Ferritin
+* Glucose
 * Hematocrit
 * Hemoglobin
 * INR
 * Lactate
 * Lactate dehydrogenase
-* Glucose
+* Lymphocyte Count, Absolute
+* Lymphocyte Count, Percent
+* Neutrophil Count, Percent
+* Neutrophil Count, Absolute
 * NT-ProBNP
 * Platelet
 * Potassium
@@ -41,6 +41,8 @@ Since it was not feasible to map all 37,297 lab tests at the establishment of th
 * Total bilirubin
 * Triglycerides
 * Troponin
+* VBG
+* WBC
   
 2. Lab tests were arranged in priority of frequency and mapped until the frequency count was apromixately <10,000 (except for culture based data)
 
