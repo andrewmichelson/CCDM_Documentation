@@ -18,16 +18,6 @@ By default, this function also removes outlier data as seen below and converts t
 
 **NOTE:** Null values were removed, so if someone had their nasal cannula O2 weaned to 0 and it was was charted as null, that has been removed.
 
-|Item|Inclusion Criteria|
-|:--:|---|
-|Temp| ≥ 15C and ≤ 0.999 quantile|
-|RR| ≥ 0 and and ≤ 0.999 quantile|
-|HR| ≥ 0 and and ≤ 0.999 quantile|
-|BP| ≥ 0 and and ≤ 0.999 quantile|
-|SpO2| ≥ 0 and ≤ 100|
-|FiO2| ≥ 0 and ≤ 100|
-|GCS| ≥ 3 and ≤ 15
-
 The input dataframe should have the following columns and structure:
 
 | pat_mrn_id  |   inpatient_data_id	 | flowsheet_name| measure_name         | value | performed|
