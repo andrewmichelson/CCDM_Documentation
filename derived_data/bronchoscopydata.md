@@ -8,7 +8,7 @@ has_toc: true
 
 # Bronchoscopy Data Extraction 
 
-Bronchoscopy data is particularly difficult to extract because lab tests performed on bronchoscopy fluid are not directly associated with procedure of performing a bronchoscopy and not all lab tests have a specimen type that directly links back to fluid obtained from a bronschopscopy. As a result, an algorithm was created to identify and extract labs run on bronschoscopy fluid. This algorithm should capture ~80% of all inpatient bronchoscopies performed. Those missing were likely ordered incorrectly and cannot be directly identified as from the EHR data. 
+While the data from bronchoscopies are discrete, it is particularly difficult to analyze because lab tests performed on bronchoscopy fluid are not directly associated with procedure of performing a bronchoscopy and not all lab tests have a specimen type that directly links back to fluid obtained from a bronschopscopy. As a result, an algorithm was created to identify and extract labs run on bronschoscopy fluid. This algorithm should capture ~80% of all inpatient bronchoscopies performed. Those missing were likely ordered incorrectly and cannot be directly identified as from the EHR data. 
 
 This algorithm was developed using a 2 step approach and allows the user extract all bronchoscopy labs, with the option to extract additional dataframes that contain formatted cell counts and culture results. 
 
