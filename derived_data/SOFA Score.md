@@ -8,7 +8,7 @@ has_toc: true
 
 # SOFA Score Implementation 
 
-This code is based on the work done by Mackenzie Hofford (https://github.com/mhofford/I2_Sepsis) and is required for this function to work. 
+This code is based on the work done by Mackenzie Hofford [OpenSep](https://github.com/mhofford/I2_Sepsis) and is required for this function to work. 
 
 Important information to note about this function: 
 
