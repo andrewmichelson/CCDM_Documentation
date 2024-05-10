@@ -21,7 +21,7 @@ The Data Core is updated on a daily basis and includes the following types of in
 
 The Data Core is a rich resource with significant amounts of information that have been hand curated to to ensure high quality, clinically appropriate information. 
 
-As of 12/2023, the data core had **2.9 billion flowsheet entries, 77.1 million medication orders and 19.8 million laboratory tests performed (Figure 1).** The most frequent and highest yield flowsheet, medication and lab tests have been mapped (Figure 1), and will continue to be updated on a regular and case-by-case basis. The items mapped to exhaustion (all items ordered at least 1 time in 4 years) can be found [here](exhaustivelymappeditems.csv). 
+As of 12/2023, the data core had **2.9 billion flowsheet entries, 77.1 million medication orders and 19.8 million laboratory tests performed (Figure 1).** The most frequent and highest yield flowsheet, medication and lab tests have been mapped (Figure 1), and will continue to be updated on a regular and case-by-case basis. The items mapped to exhaustion (all items ordered at least 1 time in 4 years) can be found [here](12-2023-exhaustivelymappeditems.csv). 
 
 **Please note: This list contains mapping for more than the listed items, but if they are not listed here, they were not mapped to exhaustion, only mapped to 1000 orders in 4 years).**
 
