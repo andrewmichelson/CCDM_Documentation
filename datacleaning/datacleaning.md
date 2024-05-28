@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Data clearning
-parent: Data cleaning
-nav_order: 2
-has_toc: false
+title: Data Cleaning
+nav_order: 4
 ---
 
 # Data cleaning
