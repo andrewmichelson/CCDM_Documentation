@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bronchoscopy Data
-parent: Derived data
+parent: Derived Data
 nav_order: 3
 has_toc: true
 ---
