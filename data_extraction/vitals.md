@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vital signs
-parent: Data extraction
+parent: Data Extraction
 nav_order: 2
 has_toc: true
 ---
