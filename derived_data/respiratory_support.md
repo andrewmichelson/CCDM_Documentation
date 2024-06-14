@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Respiratory support
-parent: Derived data
+parent: Derived Data
 nav_order: 2
 has_toc: true
 ---
