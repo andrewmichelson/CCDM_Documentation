@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Labs
-parent: Data extraction
+parent: Data Extraction
 nav_order: 3
 has_toc: true
 ---
