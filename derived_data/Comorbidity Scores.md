@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Comorbidity Scores
-parent: Derived data
+parent: Derived Data
 nav_order: 4
 has_toc: true
 ---
